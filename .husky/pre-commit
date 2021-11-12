@@ -3,3 +3,4 @@
 
 npx --no-install lint-staged
 npm run test
+npx lint-staged

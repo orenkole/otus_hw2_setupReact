@@ -9,7 +9,7 @@
     "test:watch": "jest --watch",
     "start": "webpack serve --mode development --hot",
     "build": "npx webpack --mode production",
-    "prepare": "husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
+    "prepare": "husky install && npx mrm@2 lint-staged && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
     "lint": "eslint ./src/",
     "pre-commit": "lint-staged",
     "storybook": "start-storybook -p 6006",
@@ -74,7 +74,9 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "eslint ./src --fix"
-    ]
+    ],
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   },
   "jest": {
     "moduleNameMapper": {
