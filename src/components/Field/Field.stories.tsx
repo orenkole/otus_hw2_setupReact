@@ -3,7 +3,7 @@ import { Story as StoryType } from "@storybook/react";
 import {Field, FieldProps} from ".";
 
 const Story = {
-  title: 'Field',
+  title: "Field",
   component: Field,
   argTypes: {
     sizes: {width: 4, height: 2},
