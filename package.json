@@ -9,7 +9,7 @@
     "test:watch": "jest --watch",
     "start": "webpack serve --mode development --hot",
     "build": "npx webpack --mode production",
-    "prepare": "husky install && npx mrm@2 lint-staged && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
+    "prepare": "husky install",
     "lint": "eslint ./src/",
     "pre-commit": "lint-staged",
     "storybook": "start-storybook -p 6006",
