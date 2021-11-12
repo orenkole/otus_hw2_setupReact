@@ -21,6 +21,6 @@
     "skipLibCheck": true,                           /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true,        /* Disallow inconsistently-cased references to the same file. */
     "downlevelIteration": true,
-    "types": ["@emotion/core"]
+    "types": ["@emotion/core", "jest", "@testing-library/jest-dom"]
   }
 }
