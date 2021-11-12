@@ -1,11 +1,14 @@
 import React from "react";
+import CSS from "csstype";
+
+export type CellType = {
+  isChecked: boolean,
+  serialNumber: number,
+  id: number,
+};
 
 export type CellProps = {
-  cell: {
-    isChecked: boolean,
-    serialNumber: number,
-    id: number,
-  },
+  cell: CellType,
   handleCellClick: (serialNumber: number) => void
 }
 

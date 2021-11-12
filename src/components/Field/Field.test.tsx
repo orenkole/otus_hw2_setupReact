@@ -2,7 +2,9 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import {Field} from ".";
 
-describe('Field', () => {
+const mockCB = jest.fn();
+
+describe("Field", () => {
   test("renders Field component", () => {
     render(
       <Field
@@ -12,6 +14,7 @@ describe('Field', () => {
           serialNumber: (i+1),
           id: i,
         }))}
+        handleCellClick={mockCB}
       />
     );
     expect(screen.getByText("3")).toBeInTheDocument();
@@ -26,6 +29,7 @@ describe('Field', () => {
           serialNumber: (i+1),
           id: i,
         }))}
+        handleCellClick={mockCB}
       />
     );
     expect(screen.getAllByText(/\d+/)).toHaveLength(8);

@@ -1,16 +1,14 @@
 import React from "react";
-import { Cell } from "@/components/Cell";
+import { Cell, CellType } from "@/components/Cell";
 import { Row } from "@/components/Row";
 
 export type FieldProps = {
   sizes: {width: number; height: number},
-  cells: any,
+  cells: CellType[],
   handleCellClick: (serialNumber: number) => void
 }
 
 const Field = (props: FieldProps) => {
-
-  console.log("-- f p- ---", props);
 
   let index = -1;
 
